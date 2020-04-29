@@ -55,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
         if (deviceInfos.size() == 0) {
             Toast.makeText(this, "ペアリングされたデバイスがありません", Toast.LENGTH_SHORT).show();
         }else{
-            Toast.makeText(this, "ペアリングされたデバイスが" + deviceInfos.size() + "個あります", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "ペアリングされたデバイスが" + deviceInfos.size() + "あります", Toast.LENGTH_SHORT).show();
         }
         for (DeviceInfo deviceInfo : deviceInfos) {
             // 送信情報を設定する。
@@ -64,7 +64,7 @@ public class MainActivity extends AppCompatActivity {
             sendOther.setDeviceID(deviceInfo.getModelId());
             System.out.print(deviceInfo.getModelId());
             // 振動パターンを設定する。（振動PATTERN2＝35）
-            sendOther.setVibration(new byte[]{LINKING_IF_VIB_PATTERN_ID, 37});
+            //sendOther.setVibration(new byte[]{LINKING_IF_VIB_PATTERN_ID, 35});
 
             // LEDパターンを設定する。（振動PATTERN2＝35）
             sendOther.setIllumination(new byte[] {LINKING_IF_LED_PATTERN_ID, 35});
